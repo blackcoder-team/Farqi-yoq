@@ -1,0 +1,36 @@
+header {
+    background-color: var(--primary);
+    align-items: center;
+}
+
+header h1 {
+    color: var(--text-primary);
+}
+
+header nav {
+    padding: 1rem 0;
+}
+
+header ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+header ul li {
+    list-style: none;
+    font-size: 1rem;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    transition: var(--transition);
+    padding: 0.7rem;
+}
+
+header ul li:hover a {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+}
