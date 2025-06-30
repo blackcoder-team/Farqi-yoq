@@ -1,11 +1,22 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 import './App.css'
 
+import Header from '../Header/Header'
+import About from "../About/About";
+import Musics from "../Musics/Musics";
+import Movies from '../Movies/Movies';
+
 function App() {
+  
 
   return (
     <>
-      Hello World
+      <Header/>
+      <main>
+        <About/>
+        <Musics/>
+        <Movies/>
+      </main>
     </>
   )
 }
