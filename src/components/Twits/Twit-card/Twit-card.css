@@ -1,0 +1,37 @@
+.twit-card-mini {
+    border: 2px solid var(--border);
+    border-radius: 15px;
+    padding: 14px;
+    height: auto;
+}
+.twit-card-mini img {
+    border-radius: 50%;
+    width: 50px;
+    padding-top: 5px;
+}
+.twit-card-mini h3 {
+    padding-top: 7px;
+}
+.twit-card-mini-content {
+    padding-left: 10px;
+}
+.twit-card-mini-content {
+    line-height: 15px;
+}
+.time {
+    padding-top: 8px;
+    padding-left: 10px;
+    font-size: 15px;
+}
+.twit-card-mini button {
+    background: transparent;
+    outline: none;
+    border: none;
+}
+.twit-card-mini .like i {
+    transition: all 0.5s;
+}
+.twit-card-mini .like:hover i {
+    border: 1px solid red !important;
+    background-color: red;
+}

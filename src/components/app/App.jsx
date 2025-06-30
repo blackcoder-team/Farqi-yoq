@@ -1,24 +1,33 @@
-// import { useState } from 'react'
-import './App.css'
+import React from "react";
+import "./App.css";
 
-import Header from '../Header/Header'
+import Header from "../Header/Header";
 import About from "../About/About";
 import Musics from "../Musics/Musics";
-import Movies from '../Movies/Movies';
+import Quotes from "../Quotes/Quotes";
+import Movies from "../Movies/Movies";
+import Contact from "../Contact/Contact";
+import Twits from "../Twits/Twits";
+
+import Footer from "../Footer/Footer";
 
 function App() {
-  
-
   return (
     <>
-      <Header/>
+      <Header />
       <main>
-        <About/>
-        <Musics/>
-        <Movies/>
+        <About />
+        <Musics />
+        <Movies />
+        <Twits/>
+        <Quotes />
+        <Contact />
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

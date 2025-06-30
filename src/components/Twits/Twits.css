@@ -1,0 +1,49 @@
+.share-with-cards {
+  border-radius: 15px;
+  box-shadow: 0 8px 32px 0 var(--border);
+  padding: 18px;
+  margin: 28px 14px;
+  width: 800px;
+  margin-left: 240px;
+}
+
+.form-control:focus {
+  color: var(--bs-body-color);
+  background-color: var(--bs-body-bg);
+  border-color: var(--primary-variant);
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem var(--primary-variant);
+}
+.share-with-cards input {
+  height: 55px;
+  padding-left: 30px;
+}
+.share-with-cards textarea {
+  /* height: 100px; */
+  padding-bottom: 100px;
+}
+.input-icons i {
+  position: absolute;
+  margin-left: 8px;
+}
+.input-icons textarea {
+  padding-left: 30px;
+  resize: none;
+}
+.fffff i {
+  margin-top: 13px;
+}
+
+.twit-btn {
+  background-color: var(--primary);
+  border: none;
+  width: 100%;
+  height: 45px !important;
+  border-radius: 5px !important;
+  color: white;
+  margin-top: 18px;
+  transition: all 0.3s;
+}
+.twit-btn:hover {
+    background-color: var(--primary-variant);
+}

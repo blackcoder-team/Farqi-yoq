@@ -10,7 +10,7 @@
   --success: #a8e6cf;
   --warning: #ffd3b6;
   --error: #ffaaa5;
-  --transition: 0.3s linear;
+  --transition: 0.1s linear;
 }
 
 .dark-theme {
