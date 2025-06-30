@@ -1,0 +1,99 @@
+.movies-btn {
+  background-color: var(--primary);
+  border: none;
+  width: 120px;
+  height: 45px !important;
+  margin: 0px 10px;
+  border-radius: 5px !important;
+  color: white;
+}
+.movies-btn:hover {
+  background-color: var(--primary-variant);
+  color: white;
+}
+
+.movies-cards {
+  margin-bottom: 100px;
+}
+.icons i {
+  color: var(--primary);
+}
+.movies-card-content {
+  position: absolute;
+  z-index: 999;
+  margin-top: -150px;
+  color: white;
+  background-color: rgba(83, 83, 83, 0.801);
+  padding: 10px;
+  width: 380px;
+  height: 150px;
+}
+.movvies-card-img {
+  width: 380px;
+}
+.movvies-card-img img {
+  width: 100%;
+}
+
+/*  */
+.movie-card {
+  width: 390px;
+  overflow: hidden;
+  color: white;
+  font-size: 14px;
+  transition: transform 0.2s;
+}
+
+.movie-card:hover {
+  transform: scale(1.03);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 10px;
+
+}
+
+.movie-info {
+  margin-top: -145px;
+  position: absolute;
+  z-index: 999999;
+  padding: 10px;
+  width: 390px;
+  background: linear-gradient(to top, #1e1e1ef3, #2a2a2ab4);
+  font-size: 17px;
+  border-radius: 10px;
+
+}
+.class {
+    display: block !important;
+}
+.movie-info .year-country {
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.ratings {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.imdb {
+  color: gold;
+}
+
+.kinopoisk {
+  color: orange;
+}
+
+.itv {
+  color: #42ff42;
+}
+.center {
+    margin-top: 30px;
+    width: 200px;
+}
