@@ -1,11 +1,16 @@
-import { useState } from 'react'
+import React from 'react'
 import './App.css'
+import Quotes from '../Quotes/Quotes'
+import Contact from '../Contact/Contact'
+import Footer from '../Footer/Footer'
 
 function App() {
 
   return (
     <>
-      Hello World
+      <Quotes />
+      <Contact />
+      <Footer />
     </>
   )
 }

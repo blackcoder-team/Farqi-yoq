@@ -1,0 +1,97 @@
+/* === Quotes section === */
+#quotes-sect {
+  max-width: 120%;
+  padding: 90px 0;
+  text-align: center;
+}
+
+#quotes-sect h2 {
+  font-size: 2rem;
+  margin-bottom: 18px;
+  color: var(--text-secondary);
+  letter-spacing: 1px;
+}
+
+/* === Quote card === */
+.div-for-default-quotes {
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  padding: 32px 18px 24px 18px;
+  margin-top: 10px;
+  position: relative;
+  transition: background-image 0.7s cubic-bezier(.4,2,.6,1);
+}
+
+.bg-fade {
+  animation: fadeBg 1.5s;
+}
+
+@keyframes fadeBg {
+  0% { filter: brightness(0.7) blur(2px);}
+  100% { filter: brightness(1) blur(0);}
+}
+
+.quote {
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  text-shadow: var(--border);
+  margin-bottom: 29px;
+  transition: transform 0.5s;
+  margin-top: 15px;
+}
+
+.for-df-quotes {
+  background-color: var(--surface);
+  opacity: 0.6;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.quote-slide {
+  animation: slideIn 1.2s;
+}
+
+@keyframes slideIn {
+  0% { transform: translateY(30px); opacity: 0;}
+  100% { transform: translateY(0); opacity: 1;}
+}
+
+/* === Quote ichidagi button === */
+.div-for-default-quotes button {
+  margin-top: 20px;
+  background: var(--border);
+  color: var(--text-primary);
+  border: none;
+  border-radius: 10px;
+  padding: 8px 22px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.div-for-default-quotes button:hover:enabled {
+  background: var(--success);
+  box-shadow: 0 2px 8px 0 var(--border);
+  color: var(--text-primary);
+  transition: 0.5s;
+}
+
+/* === Responsive === */
+@media (max-width: 600px) {
+  #quotes-sect {
+    max-width: 98vw;
+    padding: 10px 2vw;
+  }
+  .div-for-default-quotes {
+    padding: 18px 4vw 14px 4vw;
+  }
+  .quote {
+    font-size: 1rem;
+  }
+}
