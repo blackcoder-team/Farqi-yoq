@@ -1,6 +1,7 @@
 // import React from 'react'
 import { useState, useRef } from "react";
 import "./Musics.css";
+import './Musics.css'
 import song1 from "./snowfall.mp3";
 // import song2 from "./song2.mp3";
 import cover1 from "./snowfall.png";
@@ -22,6 +23,9 @@ const musicData = [
     cover: cover1,
   },
   {
+    cover: cover1
+  },
+    {
     id: 3,
     title: "Snowfall Vibes",
     artist: "øneheart x reidenshi",
@@ -36,6 +40,9 @@ const musicData = [
     cover: cover1,
   },
   {
+    cover: cover1
+  },
+    {
     id: 5,
     title: "Snowfall Vibes",
     artist: "øneheart x reidenshi",
@@ -49,6 +56,9 @@ const musicData = [
     audio: song1,
     cover: cover1,
   },
+  {
+    cover: cover1
+  }
 ];
 
 const formatTime = (time) => {
@@ -92,7 +102,9 @@ const Musics = () => {
         current: audio.currentTime,
         duration: audio.duration,
       },
-    }));
+        duration: audio.duration
+      }
+));
   };
 
   const handleSeek = (id, value) => {
@@ -113,6 +125,7 @@ const Musics = () => {
                   alt={music.title}
                   className="music-cover"
                 />
+                <img src={music.cover} alt={music.title} className="music-cover" />
                 <button
                   className="play-button"
                   onClick={() => togglePlay(music.id)}

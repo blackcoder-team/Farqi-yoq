@@ -44,7 +44,8 @@ const Movies = () => {
       <div className="container mt-5">
         <div className="row justify-content-center">
           {filteredMovies.map((item) => (
-            <div className="col-12 col-sm-6 col-md-4 d-flex justify-content-center mb-4" key={item.id}>
+
+            <div className="col-12 col-sm-6 col-md-4 d-flex justify-content-center mb-4 carddd" key={item.id}>
               <div className="movie-card position-relative">
                 <img src={item.movieImg} alt={item.movieName} />
                 <div className="movie-info">
