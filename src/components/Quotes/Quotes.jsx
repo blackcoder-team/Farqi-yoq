@@ -63,21 +63,23 @@ function Quotes() {
 
   return (
     <section id="quotes-sect">
-      <h2>Mashhur Iqtiboslar</h2>
-      <div
+      <h1><b>Mashhur Iqtiboslar</b></h1>
+        <div
         className={`div-for-default-quotes${anim ? " bg-fade" : ""}`}
         style={{
           backgroundImage: `
             ${current.bg}
           `
         }}
-      >
+        >
+          <div className="obshiy">
         <div className="for-df-quotes">
           <p className={`quote${anim ? " quote-slide" : ""}`}>
           {current.text}
         </p>
         </div>
         <button onClick={handleClick}>Yana iqtibos</button>
+          </div>
       </div>
     </section>
   );
