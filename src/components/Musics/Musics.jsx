@@ -1,5 +1,6 @@
 // import React from 'react'
 import { useState, useRef } from "react";
+import "./Musics.css";
 import './Musics.css'
 import song1 from "./snowfall.mp3";
 // import song2 from "./song2.mp3";
@@ -12,13 +13,16 @@ const musicData = [
     title: "Snowfall Vibes",
     artist: "øneheart x reidenshi",
     audio: song1,
-    cover: cover1
+    cover: cover1,
   },
   {
     id: 2,
     title: "Lo-fi Chill",
     artist: "Some Artist",
     audio: song1,
+    cover: cover1,
+  },
+  {
     cover: cover1
   },
     {
@@ -26,13 +30,16 @@ const musicData = [
     title: "Snowfall Vibes",
     artist: "øneheart x reidenshi",
     audio: song1,
-    cover: cover1
+    cover: cover1,
   },
   {
     id: 4,
     title: "Lo-fi Chill",
     artist: "Some Artist",
     audio: song1,
+    cover: cover1,
+  },
+  {
     cover: cover1
   },
     {
@@ -40,13 +47,16 @@ const musicData = [
     title: "Snowfall Vibes",
     artist: "øneheart x reidenshi",
     audio: song1,
-    cover: cover1
+    cover: cover1,
   },
   {
     id: 6,
     title: "Lo-fi Chill",
     artist: "Some Artist",
     audio: song1,
+    cover: cover1,
+  },
+  {
     cover: cover1
   }
 ];
@@ -90,9 +100,11 @@ const Musics = () => {
       ...prev,
       [id]: {
         current: audio.currentTime,
+        duration: audio.duration,
+      },
         duration: audio.duration
       }
-    }));
+));
   };
 
   const handleSeek = (id, value) => {
@@ -108,6 +120,11 @@ const Musics = () => {
           <div key={music.id} className="music-card">
             <div className="music-left">
               <div className="image-overlay">
+                <img
+                  src={music.cover}
+                  alt={music.title}
+                  className="music-cover"
+                />
                 <img src={music.cover} alt={music.title} className="music-cover" />
                 <button
                   className="play-button"
@@ -154,4 +171,4 @@ const Musics = () => {
   );
 };
 
-export default Musics
+export default Musics;
