@@ -20,8 +20,8 @@
   color: var(--primary);
 }
 .movies-card-content {
-  position: absolute;
-  z-index: 999;
+  position: absolute;  
+  z-index: 99;
   margin-top: -150px;
   color: white;
   background-color: rgba(83, 83, 83, 0.801);
@@ -59,7 +59,7 @@
 .movie-info {
   margin-top: -145px;
   position: absolute;
-  z-index: 999999;
+  z-index: 999;
   padding: 10px;
   width: 390px;
   background: linear-gradient(to top, #1e1e1ef3, #2a2a2ab4);

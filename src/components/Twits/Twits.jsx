@@ -40,8 +40,8 @@ class Twits extends Component {
   render() {
     return (
       <Fragment>
-        <div className="twit m-5">
-          <h1 className="text-center mb-3">Share withs </h1>
+        <div className="twit m-5" id="twits">
+          <h1 className="text-center mb-3">Share with us</h1>
 
           <div className="share-with">
             <div className="container">

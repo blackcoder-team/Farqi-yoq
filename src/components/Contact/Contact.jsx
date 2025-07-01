@@ -2,7 +2,7 @@ import "./Contact.css";
 
 function Contact() {
   return (
-    <div className="contact-boss-div">
+    <div className="contact-boss-div" id="contact">
       <div className="contact-card">
         <h1>Bizga Aloqaga Chiqing</h1>
         <form className="contact-form">

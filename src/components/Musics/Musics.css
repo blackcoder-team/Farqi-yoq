@@ -10,11 +10,6 @@
   color: var(--text-primary);
 }
 
-/* <div className="info">
-          <h2 >Musics</h2>
-          <p>Bu yerda siz o'qish, ishlash yoki shunchaki dam olish uchun musiqalar topishingiz mumkin</p>
-        </div> */
-
 .music-section .info p {
   color: var(--text-secondary);
 }

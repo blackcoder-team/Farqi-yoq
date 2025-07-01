@@ -13,9 +13,20 @@ const Header = () => {
     setModalOpen(false);
   };
 
+  window.addEventListener('scroll', () => {
+    const navbar = document.getElementById('navbar');
+    if (navbar) {
+      if (window.scrollY > 200) {
+        navbar.classList.add('sticky');
+      } else {
+        navbar.classList.remove('sticky');
+      }
+    }
+  });
+
   return (
     <header>
-      <nav>
+      <nav id='navbar'>
         <div className="container nav-container">
           <div className="logo">
             <h1>FARQI YO'Q</h1>
@@ -28,14 +39,13 @@ const Header = () => {
             <i className="fas fa-bars"></i>
           </button>
           <ul className={menuOpen ? 'nav-links active' : 'nav-links'}>
-            <li><a href="">Home</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Musics</a></li>
-            <li><a href="">Quotes</a></li>
-            <li><a href="">Movies</a></li>
-            <li><a href="">Share</a></li>
-            <li><a href="">Twits</a></li>
-            <li><a href="">Contact Us</a></li>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#musics">Musics</a></li>
+            <li><a href="#quote">Quotes</a></li>
+            <li><a href="#movies">Movies</a></li>
+            <li><a href="#twits">Twits</a></li>
+            <li><a href="#contact">Contact</a></li>
             <li className="sign-in">
               {username ? (
                 <a href="" className="username">{username}</a>
@@ -52,7 +62,7 @@ const Header = () => {
           </ul>
         </div>
       </nav>
-      <div className="hero">
+      <div className="hero" id='hero'>
         <div className="container">
           <div className="text">
             <h1>Farqi yo'q</h1>

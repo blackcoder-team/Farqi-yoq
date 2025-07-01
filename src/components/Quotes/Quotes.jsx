@@ -44,6 +44,7 @@ function Quotes() {
 
     return (
         <section
+            id="quote"
             className="quote-section"
             style={{
                 backgroundImage: `url(${current.image})`,

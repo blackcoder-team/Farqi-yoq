@@ -105,7 +105,7 @@ const Musics = () => {
   };
 
   return (
-    <section className="music-section">
+    <section id="musics" className="music-section">
       <div className="container">
         <div className="info">
           <h2 >Musiqalar</h2>

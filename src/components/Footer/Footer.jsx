@@ -4,7 +4,7 @@ function Footer() {
   return (
     <footer className="footer-boss-div">
       <div className="footer-text">
-        © {new Date().getFullYear()} Farqi Yo‘q. O'g'irlamoqchi bo'lganlar Xudo ko'rib turibti. <br /> Maded by BlackTeam.
+        © {new Date().getFullYear()} Bu sayt o'g'irlanadimi bizga "Farqi Yo'q" <br /> Made by <a href="">Made by BlackTeam</a>.
       </div>
     </footer>
   );

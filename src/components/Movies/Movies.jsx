@@ -30,7 +30,7 @@ const Movies = () => {
     : moviesData.filter((item) => item.movieGanre === selectedGenre);
 
   return (
-    <div className="movies-cards mt-5 pt-5 container">
+    <div className="movies-cards mt-5 pt-5 container" id="movies">
       <div className="movies-text text-center">
         <h1 className="pb-3 movies-title">Kinolar</h1>
         <div className="d-flex flex-wrap justify-content-center gap-3">
