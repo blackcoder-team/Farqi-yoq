@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import "./Musics.css";
 import './Musics.css'
 import song1 from "../Musics/audios/song1.mp3";
 import song2 from "../Musics/audios/song2.mp3";
@@ -13,7 +14,7 @@ const musicData = [
     title: "Perfect",
     artist: "Ed Sheeran",
     audio: song1,
-    cover: cover1
+    cover: cover1,
   },
   {
     id: 2,
@@ -34,7 +35,7 @@ const musicData = [
     title: "Perfect",
     artist: "Ed Sheeran",
     audio: song1,
-    cover: cover1
+    cover: cover1,
   },
   {
     id: 5,
@@ -91,9 +92,11 @@ const Musics = () => {
       ...prev,
       [id]: {
         current: audio.currentTime,
+        duration: audio.duration,
+      },
         duration: audio.duration
       }
-    }));
+));
   };
 
   const handleSeek = (id, value) => {
@@ -160,4 +163,4 @@ const Musics = () => {
   );
 };
 
-export default Musics
+export default Musics;
