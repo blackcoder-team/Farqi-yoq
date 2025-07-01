@@ -1,6 +1,6 @@
+
 import React from "react";
 import "./App.css";
-
 import Header from "../Header/Header";
 import About from "../About/About";
 import Musics from "../Musics/Musics";
@@ -8,7 +8,6 @@ import Quotes from "../Quotes/Quotes";
 import Movies from "../Movies/Movies";
 import Contact from "../Contact/Contact";
 import Twits from "../Twits/Twits";
-
 import Footer from "../Footer/Footer";
 
 function App() {
@@ -19,13 +18,11 @@ function App() {
         <About />
         <Musics />
         <Movies />
-        <Twits/>
         <Quotes />
+        <Twits/>
         <Contact />
       </main>
-      <footer>
-        <Footer />
-      </footer>
+      <Footer />
     </>
   );
 }
