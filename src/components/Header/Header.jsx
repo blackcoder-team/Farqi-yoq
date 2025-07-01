@@ -33,7 +33,6 @@ const Header = () => {
             <li><a href="">Musics</a></li>
             <li><a href="">Quotes</a></li>
             <li><a href="">Movies</a></li>
-            <li><a href="">Share</a></li>
             <li><a href="">Twits</a></li>
             <li><a href="">Contact Us</a></li>
             <li className="sign-in">

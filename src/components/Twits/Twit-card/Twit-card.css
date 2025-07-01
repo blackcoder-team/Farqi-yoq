@@ -27,11 +27,11 @@
     background: transparent;
     outline: none;
     border: none;
+    color: black;
 }
 .twit-card-mini .like i {
     transition: all 0.5s;
 }
-.twit-card-mini .like:hover i {
-    border: 1px solid red !important;
-    background-color: red;
+.jony:hover {
+    color: red;
 }

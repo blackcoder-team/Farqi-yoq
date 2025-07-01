@@ -109,7 +109,7 @@ class TwitCard extends Component {
               </button>
 
               <button type="button" onClick={() => this.handleLike(item.id)}>
-                <i className="fa-regular fa-heart"></i>{" "}
+                <i className="fa-regular fa-heart jony"></i>{" "}
                 {this.state.likes[item.id] || 0}
               </button>
 
