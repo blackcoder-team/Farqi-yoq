@@ -1,0 +1,195 @@
+.contact-boss-div {
+  min-height: 100vh;
+  background: var(--background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 10px;
+}
+
+.contact-content {
+  display: flex;
+  align-items: stretch;
+  gap: 40px;
+  width: 100%;
+  max-width: 900px;
+  justify-content: center;
+}
+
+.contact-card {
+  border-radius: 18px;
+  box-shadow: 0 8px 32px 0 var(--border);
+  padding: 40px 32px 32px 32px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  transition: box-shadow var(--transition);
+  display: flex;
+  flex-direction: column;
+  margin-right: 140px;
+}
+
+.contact-card h1 {
+  margin-bottom: 24px;
+  color: var(--text-primary);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+  background: var(--background);
+  color: var(--text-primary);
+  transition: border 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border: 1.5px solid var(--primary);
+  box-shadow: 0 0 0 2px var(--primary-variant);
+}
+
+.contact-form button {
+  background: var(--primary);
+  color: var(--surface);
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px 0 var(--border);
+}
+
+.contact-form button:hover {
+  background: var(--primary-variant);
+  color: var(--text-primary);
+  transform: translateY(-2px) scale(1.03);
+}
+
+.contact-info {
+  margin-top: 12px;
+  color: var(--text-secondary);
+  font-size: 0.98rem;
+  float: left;
+}
+
+.contact-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 68px;
+  margin-left: 540px;
+  height: fit-content;
+  position: absolute;
+}
+
+/* ...existing code... */
+
+.contact-icons a {
+  position: relative;
+  overflow: visible;
+  font-size: 40px;
+  color: var(--primary-variant);
+  transition: color 0.25s, transform 0.25s;
+}
+
+.contact-icons a i {
+  transition: 
+    color 0.25s,
+    background 0.25s,
+    box-shadow 0.25s,
+    transform 0.25s;
+  border-radius: 50%;
+  padding: 6px;
+  background: transparent;
+}
+
+/* Telegram rang */
+.contact-icons a[aria-label="Telegram"]:hover i {
+  color: #229ED9;
+  background: #eaf6fb;
+  box-shadow: 0 2px 12px 0 #229ED933;
+  transform: scale(1.15) rotate(-8deg);
+}
+/* Instagram rang */
+.contact-icons a[aria-label="Instagram"]:hover i {
+  color: #E1306C;
+  background: #faeaf1;
+  box-shadow: 0 2px 12px 0 #E1306C33;
+  transform: scale(1.15) rotate(-8deg);
+}
+/* Email rang */
+.contact-icons a[aria-label="Email"]:hover i {
+  color: #EA4335;
+  background: #faecec;
+  box-shadow: 0 2px 12px 0 #EA433533;
+  transform: scale(1.15) rotate(-8deg);
+}
+/* GitHub rang */
+.contact-icons a[aria-label="GitHub"]:hover i {
+  color: #24292F;
+  background: #f4f4f4;
+  box-shadow: 0 2px 12px 0 #24292F33;
+  transform: scale(1.15) rotate(-8deg);
+}
+
+/* Label animatsiyasi */
+.icon-label {
+  position: absolute;
+  left: 60px;
+  top: 50%;
+  transform: translateY(-50%) translateX(-20px);
+  opacity: 0;
+  background: var(--surface);
+  color: var(--primary);
+  padding: 6px 18px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px 0 var(--border);
+  pointer-events: none;
+  transition: 
+    opacity 0.1s var(--transition),
+    transform 0.1s var(--transition);
+  z-index: 2;
+}
+
+.contact-icons a:hover .icon-label,
+.contact-icons a:focus .icon-label {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
+/* Mobil uchun */
+@media (max-width: 900px) {
+  .icon-label {
+    left: 50%;
+    top: 70px;
+    transform: translateX(-50%) translateY(-10px);
+    transition: opacity 0.25s, top 0.25s, transform 0.25s;
+    padding: 6px 14px;
+  }
+  .contact-icons a:hover .icon-label,
+  .contact-icons a:focus .icon-label {
+    opacity: 1;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%) translateY(0);
+  }
+}

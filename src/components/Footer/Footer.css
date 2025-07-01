@@ -1,0 +1,36 @@
+.footer-boss-div {
+  background: var(--text-primary);
+  color: var(--surface);
+  padding: 28px 0 16px 0;
+  text-align: center;
+  border-top: 2px solid var(--border);
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin-bottom: 12px;
+}
+
+.footer-icons a i {
+  width: 32px;
+  height: 32px;
+  filter: grayscale(0.2) brightness(0.95);
+  transition: transform 0.2s, filter 0.2s;
+  opacity: 0.85;
+  color: var(--surface);
+}
+
+.footer-icons a:hover i {
+  transform: scale(1.18) rotate(-8deg);
+  filter: drop-shadow(0 2px 8px var(--surface)) brightness(1.2);
+  opacity: 1;
+}
+
+.footer-text {
+  font-size: 1rem;
+  color: var(--surface);
+  opacity: 0.85;
+  letter-spacing: 0.5px;
+}
