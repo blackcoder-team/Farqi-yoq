@@ -94,9 +94,9 @@ const Musics = () => {
         current: audio.currentTime,
         duration: audio.duration,
       },
-        duration: audio.duration
-      }
-));
+      duration: audio.duration
+    }
+    ));
   };
 
   const handleSeek = (id, value) => {
