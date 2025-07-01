@@ -1,16 +1,22 @@
 .music-section {
   background-color: var(--background);
-  padding: 2rem;
-  border-radius: 0.5rem;
+  padding: 4rem 0;
   transition: var(--transition);
 }
 
-.section-title {
-  color: var(--primary);
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  border-bottom: 2px solid var(--primary-variant);
-  padding-bottom: 0.5rem;
+.music-section .info {
+  padding-bottom: 2rem;
+  text-align: center;
+  color: var(--text-primary);
+}
+
+/* <div className="info">
+          <h2 >Musics</h2>
+          <p>Bu yerda siz o'qish, ishlash yoki shunchaki dam olish uchun musiqalar topishingiz mumkin</p>
+        </div> */
+
+.music-section .info p {
+  color: var(--text-secondary);
 }
 
 .music-grid {

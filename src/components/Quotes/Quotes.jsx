@@ -1,88 +1,65 @@
 import { useState } from "react";
-import './Quotes.css'
+import "./Quotes.css";
 
 function Quotes() {
-  const quotes = [
-    {
-      text: "Steve Jobs: Faqat sevgan ishlaringizni qiling.",
-      bg: "url('https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg')",
-      author: "Steve Jobs"
-    },
-    {
-      text: "Albert Einstein: Hech qachon qiziqishni to‘xtatmang.",
-      bg: "url('https://images.pexels.com/photos/1000445/pexels-photo-1000445.jpeg')",
-      author: "Albert Einstein"
-    },
-    {
-      text: "Oprah Winfrey: Harakat qiling, qo‘rqmang.",
-      bg: "url('https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg')",
-      author: "Oprah Winfrey"
-    },
-    {
-      text: "Oprah Winfrey: Siz ishonadigan narsaga harakat qiling va hech qachon taslim bo‘lmang.",
-      bg: "url('https://images.pexels.com/photos/20572827/pexels-photo-20572827.jpeg')",
-      author: "Oprah Winfrey"
-    },
-    {
-      text: "Elon Musk: Qandaydir narsani o‘rganing, farqi yo‘q.",
-      bg: "url('https://images.pexels.com/photos/433155/pexels-photo-433155.jpeg')",
-      author: "Elon Musk"
-    },
-    {
-      text: "“Innovatsiya – bu lider va ergashuvchining farqini belgilovchi narsa” – Steve Jobs",
-      bg: "url('https://images.pexels.com/photos/31566915/pexels-photo-31566915.jpeg')",
-      author: "Steve Jobs"
-    },
-    {
-      text: "Elon Musk: Muvaffaqiyatsizlik — bu muvaffaqiyat sari yo‘lning bir qismi.",
-      bg: "url('https://images.pexels.com/photos/16902418/pexels-photo-16902418.jpeg')",
-      author: "Elon Musk"
-    },
-    {
-      text: "Albert Einstein: Tasavvur bilimdan muhimroqdir.",
-      bg: "url('https://images.pexels.com/photos/13546676/pexels-photo-13546676.jpeg')",
-      author: "Albert Einstein"
-    },
-  ];
-  const [current, setCurrent] = useState(quotes[0]);
-  const [anim, setAnim] = useState(false);
-  const [filter] = useState("Barchasi");
+    const quotes = [
+        {
+            text: "Faqat sevgan ishlaringizni qiling.",
+            author: "Steve Jobs",
+            image:
+                "https://d23.com/app/uploads/2013/08/1180w-600h_disney-legends-steven-jobs.jpg",
+        },
+        {
+            text: "Hech qachon qiziqishni to‘xtatmang.",
+            author: "Albert Einstein",
+            image:
+                "https://cdn.viva.org.uk/wp-content/uploads/2020/09/albert-einstein-vegetarian.jpg",
+        },
+        {
+            text: "Harakat qiling, qo‘rqmang.",
+            author: "Oprah Winfrey",
+            image:
+                "https://www.gsb.stanford.edu/sites/default/files/styles/1630x_variable/public/photo-oprah-sitting-couch.jpg.webp?itok=H58cgOpx",
+        },
+        {
+            text: "Qandaydir narsani o‘rganing, farqi yo‘q.",
+            author: "Elon Musk",
+            image:
+                "https://www.bankrate.com/brp/2025/02/06145605/elon-musk-2025-worlds-richest-person.jpg?auto=webp&optimize=high&crop=16:9",
+        },
+        {
+            text: "O‘zingni tani.",
+            author: "Socrates",
+            image:
+                "https://brightspotcdn.byu.edu/dims4/default/1f88894/2147483647/strip/true/crop/3323x1869+0+0/resize/840x472!/quality/90/?url=https%3A%2F%2Fbrigham-young-brightspot-us-east-2.s3.us-east-2.amazonaws.com%2F9d%2F25%2F94605cd44812a154860443a4ae21%2Fstatue-of-plato-12427.jpg",
+        },
+    ];
 
-  const filteredQuotes = filter === "Barchasi"
-    ? quotes
-    : quotes.filter(q => q.author === filter);
+    const [current, setCurrent] = useState(quotes[0]);
 
-  const handleClick = () => {
-    const random = filteredQuotes[Math.floor(Math.random() * filteredQuotes.length)];
-    setCurrent(random);
-    setAnim(true);
-    setTimeout(() => {
-      setAnim(false);
-    }, 1500);
-  };
+    const handleClick = () => {
+        const random = quotes[Math.floor(Math.random() * quotes.length)];
+        setCurrent(random);
+    };
 
-  return (
-    <section id="quotes-sect">
-      <h1><b>Mashhur Iqtiboslar</b></h1>
-        <div
-        className={`div-for-default-quotes${anim ? " bg-fade" : ""}`}
-        style={{
-          backgroundImage: `
-            ${current.bg}
-          `
-        }}
+    return (
+        <section
+            className="quote-section"
+            style={{
+                backgroundImage: `url(${current.image})`,
+            }}
         >
-          <div className="obshiy">
-        <div className="for-df-quotes">
-          <p className={`quote${anim ? " quote-slide" : ""}`}>
-          {current.text}
-        </p>
-        </div>
-        <button onClick={handleClick}>Yana iqtibos</button>
-          </div>
-      </div>
-    </section>
-  );
+            <div className="filter">
+                <div className="container">
+                    <div className="quote-content">
+                        <p className="quote-text">"{current.text}"</p>
+                        <p className="quote-author">— {current.author}</p>
+                        <button onClick={handleClick}>Yana iqtibos</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
 }
 
 export default Quotes;
